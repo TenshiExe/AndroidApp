@@ -45,7 +45,7 @@ public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.PokedexV
                 public void onClick(View v) {   // Launch PokemonActivity
                     Pokemon current = (Pokemon) containerView.getTag(); // casting to Pokemon type
                     Intent intent = new Intent(v.getContext(), PokemonActivity.class);
-                    intent.putExtra("url", current.getUrl());
+                    intent.putExtra("url", current.getUrl());   //passing the url of current pokemon
 
                     v.getContext().startActivity(intent);   //Start activity on click
                 }
